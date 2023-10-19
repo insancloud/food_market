@@ -21,6 +21,26 @@ class Transaction extends Equatable {
     required this.user,
   });
 
+  Transaction copyWith({
+    int? id,
+    Food? food,
+    int? quantity,
+    int? total,
+    DateTime? dateTime,
+    TransactionStatus? status,
+    User? user,
+  }) {
+    return Transaction(
+      id: id ?? this.id,
+      food: food ?? this.food,
+      quantity: quantity ?? this.quantity,
+      total: total ?? this.total,
+      dateTime: dateTime ?? this.dateTime,
+      status: status ?? this.status,
+      user: user ?? this.user,
+    );
+  }
+
   @override
   // TODO: implement props
   List<Object?> get props =>
@@ -30,20 +50,26 @@ class Transaction extends Equatable {
 List<Transaction> mockTransaction = [
   Transaction(
       id: 1,
-      food: MockFoods[1],
+      food: mockFoods[1],
       quantity: 10,
-      total: (MockFoods[1].price * 10 * 1.1).round() + 5000,
+      total: (mockFoods[1].price * 10 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
       status: TransactionStatus.cancelled,
       user: mockUser),
-
-       Transaction(
+  Transaction(
       id: 2,
-      food: MockFoods[4],
+      food: mockFoods[4],
       quantity: 10,
-      total: (MockFoods[4].price * 10 * 1.1).round() + 5000,
+      total: (mockFoods[4].price * 10 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
       status: TransactionStatus.on_delivery,
       user: mockUser),
-      
+  Transaction(
+      id: 3,
+      food: mockFoods[2],
+      quantity: 11,
+      total: (mockFoods[2].price * 11 * 1.1).round() + 5000,
+      dateTime: DateTime.now(),
+      status: TransactionStatus.on_delivery,
+      user: mockUser),
 ];

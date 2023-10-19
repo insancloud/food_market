@@ -64,13 +64,16 @@ class _FoodPageState extends State<FoodPage> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   Row(
-                    children: MockFoods.map((e) => Padding(
-                          padding: EdgeInsets.only(
-                            left: (e == MockFoods.first) ? defaultMargin : 0,
-                            right: defaultMargin,
-                          ),
-                          child: FoodCard(food: e),
-                        )).toList(),
+                    children: mockFoods
+                        .map((e) => Padding(
+                              padding: EdgeInsets.only(
+                                left:
+                                    (e == mockFoods.first) ? defaultMargin : 0,
+                                right: defaultMargin,
+                              ),
+                              child: FoodCard(food: e),
+                            ))
+                        .toList(),
                   )
                 ],
               ),
@@ -95,27 +98,27 @@ class _FoodPageState extends State<FoodPage> {
                   ),
                   Builder(builder: (_) {
                     List<Food> foods = (selectedIndex == 0)
-                        ? MockFoods
+                        ? mockFoods
                         : (selectedIndex == 1)
                             ? []
                             : [];
                     return Column(
                       children: foods
-                          .map((e) =>
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(defaultMargin, 0, defaultMargin, 16),
-                                child: FoodListItem(food: e, itemWidth: listItemWidth),
+                          .map((e) => Padding(
+                                padding: EdgeInsets.fromLTRB(
+                                    defaultMargin, 0, defaultMargin, 16),
+                                child: FoodListItem(
+                                    food: e, itemWidth: listItemWidth),
                               ))
                           .toList(),
                     );
                   }),
-                  
                 ],
               ),
             ),
-            SizedBox(
-                    height: 80,
-                  ),
+            const SizedBox(
+              height: 80,
+            ),
           ],
         )
       ],

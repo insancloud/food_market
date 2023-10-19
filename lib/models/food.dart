@@ -24,7 +24,7 @@ class Food extends Equatable {
   List<Object?> get props => [id, picturePath, name, description, ingredients, price, rate];
 }
 
-List<Food> MockFoods = [
+List<Food> mockFoods = [
   Food(
       id: 1,
       picturePath:

@@ -39,7 +39,7 @@ List<Food> mockFoods = [
       id: 2,
       picturePath:
           "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/the-ultimate-guide-to-must-try-indonesian-food/2.jpg",
-      name: "Pempek",
+      name: "Pempek ",
       description:
           "Makanan berbahan daging ikan dan tepung kanji ini konon sudah ada sejak abad ke-16 lho, Sobat Pesona! Pempek menjadi kuliner favorit masyarakat, karena punya rasa yang komplit. ",
       ingredients: "Biji bapak kau, dan bahan rahasia lainnya",

@@ -1,9 +1,12 @@
-import 'dart:ffi';
+// import 'dart:ffi';
+// import 'dart:js_util';
 import 'dart:math';
 
-import 'package:dropdown_button2/dropdown_button2.dart';
+// import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:food_market/cubit/food_cubit.dart';
+import 'package:food_market/cubit/user_cubit.dart';
 import 'package:food_market/models/models.dart';
 import 'package:food_market/shared/shared.dart';
 import 'package:food_market/ui/widgets/widgets.dart';
@@ -12,6 +15,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:get/get.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'general_page.dart';
 part 'sign_in_page.dart';
@@ -22,3 +26,7 @@ part 'food_page.dart';
 part 'food_details_page.dart';
 part 'payment_page.dart';
 part 'illustration_page.dart';
+part 'success_order_page.dart';
+part 'success_sign_up_page.dart';
+part 'order_history_page.dart';
+part 'profile_page.dart';

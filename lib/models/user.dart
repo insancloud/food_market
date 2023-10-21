@@ -68,7 +68,7 @@ List<User> mockUser = [
       houseNumber: "RT 01",
       phoneNumber: "0812-1133-2183",
       city: "Kota Gorontalo",
-      picturePath: mockFoods[1].picturePath),
+      picturePath: "https://franchisematch.com/wp-content/uploads/2015/02/john-doe.jpg"),
   User(
       id: 1,
       name: "Pecco Bagnaia",

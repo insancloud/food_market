@@ -175,12 +175,12 @@ class IllustrationPage extends StatelessWidget {
                   width: 200,
                   height: 45,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: mainColor),
+                    style: ElevatedButton.styleFrom(backgroundColor: "8D92A3".toColor()),
                     onPressed: () {
                       buttonTap1;
                     },
                     child: Text(
-                      buttonTitle2!,
+                      buttonTitle2 ?? "Title",
                       style: blackFontStyle3.copyWith(
                         fontWeight: FontWeight.w500, color: Colors.white,
                       ),

@@ -11,7 +11,7 @@ class Transaction extends Equatable {
   final TransactionStatus status;
   final User user;
 
-  Transaction({
+  const Transaction({
     required this.id,
     required this.food,
     required this.quantity,
@@ -55,7 +55,7 @@ List<Transaction> mockTransaction = [
       quantity: 10,
       total: (mockFoods[1].price * 10 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
-      status: TransactionStatus.cancelled,
+      status: TransactionStatus.pending,
       user: mockUser[0]),
   Transaction(
       id: 2,
@@ -71,6 +71,6 @@ List<Transaction> mockTransaction = [
       quantity: 11,
       total: (mockFoods[2].price * 11 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
-      status: TransactionStatus.on_delivery,
+      status: TransactionStatus.delivered,
       user: mockUser[2]),
 ];

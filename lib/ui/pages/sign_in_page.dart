@@ -8,12 +8,12 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  @override
-  Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     bool isLoading = false;
 
+  @override
+  Widget build(BuildContext context) {
     return GeneralPage(
       title: "Sign In",
       subtitle: "Find your best ever meal",
@@ -73,12 +73,14 @@ class _SignInPageState extends State<SignInPage> {
             height: 45,
             padding: EdgeInsets.symmetric(horizontal: defaultMargin),
             child: isLoading
-                ? SpinKitFadingCircle(
-                    size: 24,
-                    color: mainColor,
-                  )
+                ? loadingIndicator
                 : ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () async{
+                      setState(() {
+                        isLoading = true;
+                      });
+                      // await context
+                    },
                     style: ElevatedButton.styleFrom(backgroundColor: mainColor),
                     child: Text("Sign In",
                         style: GoogleFonts.poppins(

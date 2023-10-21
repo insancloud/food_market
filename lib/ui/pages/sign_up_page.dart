@@ -25,13 +25,13 @@ class _SignUpPageState extends State<SignUpPage> {
           Container(
             width: 110,
             height: 110,
-            margin: EdgeInsets.only(top: 26),
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
+            margin: const EdgeInsets.only(top: 26),
+            padding: const EdgeInsets.all(10),
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/photo_border.png"))),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       image: NetworkImage(

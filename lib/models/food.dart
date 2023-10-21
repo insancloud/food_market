@@ -1,5 +1,7 @@
 part of 'models.dart';
 
+enum FoodType { new_food, popular, recomended }
+
 class Food extends Equatable {
   final int id;
   final String picturePath;
@@ -8,6 +10,7 @@ class Food extends Equatable {
   final String ingredients;
   final int price;
   final double rate;
+  final List<FoodType> types;
 
   Food({
     required this.id,
@@ -17,11 +20,13 @@ class Food extends Equatable {
     required this.ingredients,
     required this.price,
     required this.rate,
+    this.types = const [],
   });
-  
+
   @override
   // TODO: implement props
-  List<Object?> get props => [id, picturePath, name, description, ingredients, price, rate];
+  List<Object?> get props =>
+      [id, picturePath, name, description, ingredients, price, rate];
 }
 
 List<Food> mockFoods = [
@@ -30,11 +35,11 @@ List<Food> mockFoods = [
       picturePath:
           "https://akcdn.detik.net.id/community/media/visual/2022/06/10/ilustrasi-rendang-1_169.jpeg",
       name: "Rendang",
-      description:
-          "Makanan yang berasal dari sumatra ini sangat digemari beragam lapisan masyarakat",
+      description: "Makanan yang berasal dari sumatra ini sangat digemari beragam lapisan masyarakat",
       ingredients: "Makanan ini berbahan dasar daging dan dimasak dengan bumbu aneka rempah dan santan",
       price: 45000,
-      rate: 4.2),
+      rate: 4.2,
+      types: [FoodType.new_food, FoodType.popular, FoodType.recomended]),
   Food(
       id: 2,
       picturePath:
@@ -54,17 +59,20 @@ List<Food> mockFoods = [
           " Rasa nikmat dari nasi goreng sudah diakui oleh dunia. Bahkan, pada tahun 2011 silam, nasi goreng menyabet peringkat kedua dalam daftar 50 makanan paling enak didunia berdasarkan hasil survei CNN Internasional",
       ingredients: "Biji Bapak muda, Air, Parutan Kelapa, Cakalang",
       price: 12000,
-      rate: 4.2),
+      rate: 4.2,
+      types: [
+        FoodType.new_food,
+      ]),
   Food(
       id: 4,
       picturePath:
           "https://www.masakapahariini.com/wp-content/uploads/2021/09/Binte-Biluhuta-Khas-Gorontalo.jpg",
       name: "Milu Siram",
-      description:
-          "Milu atau binthe artinya jagung, sedangkan siram atau huta berarti berkuah. Binthe biluhuta artinya makanan jagung yang diolah menggunakan kuah",
+      description: "Milu atau binthe artinya jagung, sedangkan siram atau huta berarti berkuah. Binthe biluhuta artinya makanan jagung yang diolah menggunakan kuah",
       ingredients: "Biji milu muda, Air, Parutan Kelapa, Cakalang",
       price: 12000,
-      rate: 4.2),
+      rate: 4.2,
+      types: [FoodType.new_food, FoodType.popular]),
   Food(
       id: 5,
       picturePath:

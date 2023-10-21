@@ -14,9 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FoodDetailsPage(
-        transaction: Transaction(food: mockFoods[4], quantity: 2, id: 3, dateTime: DateTime.now(), total: 12000, status: TransactionStatus.on_delivery, user: mockUser ),
-      ),
+      // home: PaymentPage(
+      //   transaction: Transaction(food: mockFoods[4], quantity: 2, id: 3, dateTime: DateTime.now(), total:(mockFoods[0].price * 2* 1.1).toInt() + 50000 , status: TransactionStatus.on_delivery, user: mockUser[1], ),
+      // ),
+      home: MainPage(),
+      // home: IllustrationPage(title: "Judul atuh", subtitle: "Sub judul Atuh",),
     );
   }
 }
+

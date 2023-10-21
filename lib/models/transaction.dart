@@ -29,6 +29,7 @@ class Transaction extends Equatable {
     DateTime? dateTime,
     TransactionStatus? status,
     User? user,
+    
   }) {
     return Transaction(
       id: id ?? this.id,
@@ -55,7 +56,7 @@ List<Transaction> mockTransaction = [
       total: (mockFoods[1].price * 10 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
       status: TransactionStatus.cancelled,
-      user: mockUser),
+      user: mockUser[0]),
   Transaction(
       id: 2,
       food: mockFoods[4],
@@ -63,7 +64,7 @@ List<Transaction> mockTransaction = [
       total: (mockFoods[4].price * 10 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
       status: TransactionStatus.on_delivery,
-      user: mockUser),
+      user: mockUser[1]),
   Transaction(
       id: 3,
       food: mockFoods[2],
@@ -71,5 +72,5 @@ List<Transaction> mockTransaction = [
       total: (mockFoods[2].price * 11 * 1.1).round() + 5000,
       dateTime: DateTime.now(),
       status: TransactionStatus.on_delivery,
-      user: mockUser),
+      user: mockUser[2]),
 ];

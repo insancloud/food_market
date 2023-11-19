@@ -10,7 +10,7 @@ class User extends Equatable {
   final String city;
   final String picturePath;
 
-  User({
+  const User({
     required this.id,
     required this.name,
     required this.email,
@@ -60,7 +60,7 @@ List<User> mockUser = [
       phoneNumber: "0896-9806-2183",
       city: "Kota Gorontalo",
       picturePath: mockFoods[1].picturePath),
-  User(
+  const User(
      id: 1,
       name: "Alex Benjamin",
       email: "alexb@gmail.com",

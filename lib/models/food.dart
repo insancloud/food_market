@@ -1,6 +1,6 @@
 part of 'models.dart';
 
-enum FoodType { new_food, popular, recomended }
+enum FoodType { newFood, popular, recomended }
 
 class Food extends Equatable {
   final int id;
@@ -12,7 +12,7 @@ class Food extends Equatable {
   final double rate;
   final List<FoodType> types;
 
-  Food({
+  const Food({
     required this.id,
     required this.picturePath,
     required this.name,
@@ -24,13 +24,12 @@ class Food extends Equatable {
   });
 
   @override
-  // TODO: implement props
   List<Object?> get props =>
       [id, picturePath, name, description, ingredients, price, rate];
 }
 
 List<Food> mockFoods = [
-  Food(
+  const Food(
       id: 1,
       picturePath:
           "https://akcdn.detik.net.id/community/media/visual/2022/06/10/ilustrasi-rendang-1_169.jpeg",
@@ -39,8 +38,8 @@ List<Food> mockFoods = [
       ingredients: "Makanan ini berbahan dasar daging dan dimasak dengan bumbu aneka rempah dan santan",
       price: 45000,
       rate: 4.2,
-      types: [FoodType.new_food, FoodType.popular, FoodType.recomended]),
-  Food(
+      types: [FoodType.newFood, FoodType.popular, FoodType.recomended]),
+  const Food(
       id: 2,
       picturePath:
           "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/the-ultimate-guide-to-must-try-indonesian-food/2.jpg",
@@ -50,7 +49,7 @@ List<Food> mockFoods = [
       ingredients: "Biji bapak kau, dan bahan rahasia lainnya",
       price: 12000,
       rate: 4.2),
-  Food(
+  const Food(
       id: 3,
       picturePath:
           "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/the-ultimate-guide-to-must-try-indonesian-food/nasigoreng.jpg",
@@ -61,9 +60,9 @@ List<Food> mockFoods = [
       price: 12000,
       rate: 4.2,
       types: [
-        FoodType.new_food,
+        FoodType.newFood,
       ]),
-  Food(
+  const Food(
       id: 4,
       picturePath:
           "https://www.masakapahariini.com/wp-content/uploads/2021/09/Binte-Biluhuta-Khas-Gorontalo.jpg",
@@ -72,8 +71,8 @@ List<Food> mockFoods = [
       ingredients: "Biji milu muda, Air, Parutan Kelapa, Cakalang",
       price: 12000,
       rate: 4.2,
-      types: [FoodType.new_food, FoodType.popular]),
-  Food(
+      types: [FoodType.newFood, FoodType.popular]),
+  const Food(
       id: 5,
       picturePath:
           "https://www.masakapahariini.com/wp-content/uploads/2021/09/Binte-Biluhuta-Khas-Gorontalo.jpg",

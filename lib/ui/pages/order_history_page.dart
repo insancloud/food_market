@@ -12,7 +12,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
 
   List<Transaction> inProgress = mockTransaction
       .where((element) =>
-          element.status == TransactionStatus.on_delivery ||
+          element.status == TransactionStatus.onDelivery ||
           element.status == TransactionStatus.pending)
       .toList();
   List<Transaction> past = mockTransaction

@@ -25,9 +25,14 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
           debugShowCheckedModeBanner: false,
           // home: PaymentPage(
-          //   transaction: Transaction(food: mockFoods[4], quantity: 2, id: 3, dateTime: DateTime.now(), total:(mockFoods[0].price * 2* 1.1).toInt() + 50000 , status: TransactionStatus.on_delivery, user: mockUser[1], ),
+          //   transaction: Transaction(food: mockFoods[4], quantity: 2, id: 3, dateTime: DateTime.now(), total:(mockFoods[0].price * 2* 1.1).toInt() + 50000 , status: TransactionStatus.onDelivery, user: mockUser[1], ),
           // ),
-          home: const MainPage()
+          home: MainPage()
+          // home: FoodDetailsPage(
+          //   transaction: Transaction(
+          //     food: mockFoods[4], id: 12, quantity: 12, total: 121212, dateTime: DateTime.now(), status:  TransactionStatus.onDelivery, user: mockUser[1],
+          //   ),
+          // ),
           // home: IllustrationPage(title: "Judul atuh", subtitle: "Sub judul Atuh",),
           ),
     );
